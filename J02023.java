@@ -7,7 +7,8 @@ public class J02023 {
     int s = sc.nextInt();
     if (n * 9 < s || s == 0 && n > 1) {
       System.out.println("-1 -1");
-    } else if (n == 1 && s == 0) System.out.printf("0 0");
+    } else if (n == 1 && s == 0)
+      System.out.printf("0 0");
     else {
       int temp = s;
 
@@ -19,7 +20,8 @@ public class J02023 {
         int st = Math.min(9, temp);
         ar[i] += st;
         temp -= st;
-        if (temp == 0) break;
+        if (temp == 0)
+          break;
       }
       for (int k : ar) {
         System.out.printf("%d", k);
@@ -31,7 +33,8 @@ public class J02023 {
         int st = Math.min(9, temp);
         ar2[i] += st;
         temp -= st;
-        if (temp == 0) break;
+        if (temp == 0)
+          break;
       }
       for (int k : ar2) {
         System.out.printf("%d", k);
