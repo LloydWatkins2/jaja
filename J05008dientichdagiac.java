@@ -29,8 +29,8 @@ public class J05008dientichdagiac {
         sumsau += (p1.get(i).b * p1.get(i + 1).a);
       }
 
-      double s = Math.abs(sumtrc - sumsau) / 2;
-      System.out.printf("%f\n", s);
+      double s = Math.abs(sumtrc - sumsau) * 0.5;
+      System.out.printf("%.3f\n", s);
     }
   }
 }
