@@ -1,0 +1,86 @@
+import java.util.ArrayList;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+/** J05028danhsachdoanhnghiepsinhvienthuctap_1 */
+public class J05028danhsachdoanhnghiepsinhvienthuctap_1 {
+  public static class doanhnghiep {
+    String mdn, name;
+    int capacity;
+
+    public doanhnghiep(String mdn, String name, int capacity) {
+      this.mdn = mdn;
+      this.name = name;
+      this.capacity = capacity;
+    }
+
+    @Override
+    public String toString() {
+      return String.format("%s %s %d", this.mdn, this.name, this.capacity);
+    }
+  }
+
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int t = sc.nextInt();
+    ArrayList<doanhnghiep> ar = new ArrayList<>();
+    while (t-- > 0) {
+      sc.nextLine();
+      ar.add(new doanhnghiep(sc.nextLine(), sc.nextLine(), sc.nextInt()));
+    }
+    Collections.sort(
+        ar,
+        (doanhnghiep a, doanhnghiep b) -> {
+          if (a.capacity == b.capacity) {
+            return a.mdn.compareTo(b.mdn);
+          }
+          return b.capacity - a.capacity;
+        });
+    for (doanhnghiep e : ar) {
+      System.out.println(e);
+    }
+  }
+}
+import java.util.Collections;
+import java.util.Scanner;
+
+/** J05028danhsachdoanhnghiepsinhvienthuctap_1 */
+public class J05028danhsachdoanhnghiepsinhvienthuctap_1 {
+  public static class doanhnghiep {
+    String mdn, name;
+    int capacity;
+
+    public doanhnghiep(String mdn, String name, int capacity) {
+      this.mdn = mdn;
+      this.name = name;
+      this.capacity = capacity;
+    }
+
+    @Override
+    public String toString() {
+      return String.format("%s %s %d", this.mdn, this.name, this.capacity);
+    }
+  }
+
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int t = sc.nextInt();
+    ArrayList<doanhnghiep> ar = new ArrayList<>();
+    while (t-- > 0) {
+      sc.nextLine();
+      ar.add(new doanhnghiep(sc.nextLine(), sc.nextLine(), sc.nextInt()));
+    }
+    Collections.sort(
+        ar,
+        (doanhnghiep a, doanhnghiep b) -> {
+          if (a.capacity == b.capacity) {
+            return a.mdn.compareTo(b.mdn);
+          }
+          return b.capacity - a.capacity;
+        });
+    for (doanhnghiep e : ar) {
+      System.out.println(e);
+    }
+  }
+}
